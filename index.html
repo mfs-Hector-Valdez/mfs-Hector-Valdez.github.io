@@ -31,6 +31,7 @@
 
   <title>Amigo Tigo</title>
   <link rel="manifest" href="manifest.json">
+
 <script>
     function loadSegmentAnalytics(secretValue) {
       secretValue = secretValue.replace(/"/gi,"");
@@ -44,14 +45,14 @@
       }
     }
 </script>
-  <script src="script.js"></script>
+  <script src="channelscript.js"></script>
 </head>
 <body>
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
   <script>
-    var serviceWorkerVersion = '517167101';
+    var serviceWorkerVersion = '3042999306';
     var scriptLoaded = false;
     function loadMainDartJs() {
       if (scriptLoaded) {
@@ -62,7 +63,6 @@
       scriptTag.src = 'main.dart.js';
       scriptTag.type = 'application/javascript';
       document.body.append(scriptTag);
-
     }
 
     if ('serviceWorker' in navigator) {
@@ -79,8 +79,6 @@
                 if (serviceWorker.state == 'activated') {
                   console.log('Installed new service worker.');
                   loadMainDartJs();
-                  console.log('Installed new service worker::::::tokencognito');
-                  window.tokencognito.postMessage("probando el mensajito XD");
                 }
               });
             }
@@ -94,13 +92,10 @@
               console.log('New service worker available.');
               reg.update();
               waitForActivation(reg.installing);
-              console.log('New service worker available:::::::::::::tokencognito');
-              tokencognito.postMessage("probando el mensajito XD");
             } else {
               // Existing service worker is still good.
               console.log('Loading app from service worker.');
               loadMainDartJs();
-
             }
           });
 
