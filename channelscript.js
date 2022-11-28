@@ -7,8 +7,3 @@ window.geolocation = {
     "longitude" : ""
 }
 
-function setgeolocation(latitude,longitude)
-{
-    geolocation.latitude = latitude;
-    geolocation.longitude = latitude;
-}
