@@ -33,15 +33,6 @@
     <link rel="manifest" href="manifest.json">
     <script src="channelscript.js"></script>
     <script>
-        window.geolocation = {
-            latitude : "0",
-            longitude : "0"
-        }
-
-        function setgeolocation(latitude, longitude) {
-            geolocation.latitude = latitude;
-            geolocation.longitude = longitude;
-        }
 
         function loadSegmentAnalytics(secretValue) {
             secretValue = secretValue.replace(/"/gi, "");
@@ -86,7 +77,7 @@
      application. For more information, see:
      https://developers.google.com/web/fundamentals/primers/service-workers -->
 <script>
-    var serviceWorkerVersion = '888518517';
+    var serviceWorkerVersion = '1267590154';
     var scriptLoaded = false;
 
     function loadMainDartJs() {
