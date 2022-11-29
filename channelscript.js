@@ -11,14 +11,3 @@ function postMessage(message) {
 
 }
 
-window.geolocation = {
-    latitude : "600.0",
-    longitude : "600.0"
-}
-
-function setgeolocation(latitude, longitude) {
-    geolocation.latitude = latitude;
-    geolocation.longitude = longitude;
-    console.log(longitude,latitude);
-}
-
