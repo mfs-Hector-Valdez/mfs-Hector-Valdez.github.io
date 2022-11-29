@@ -33725,15 +33725,11 @@ avU:function avU(a){this.a=a},
 axc:function axc(a){this.a=a},
 axe:function axe(a){this.a=a},
 aGN:function aGN(a){this.a=a},
-bcV(){var s,r,q
-if($.a0==null)A.ba2()
+bcV(){if($.a0==null)A.ba2()
 $.a0.toString
-s=$.agp()
-r=A.b7t(s.h(0,"geolocation"))
-s.jp("postMessage",[r.j(r)])
 A.xk(A.a([B.xo],t.UW))
-q=A.hQ(A.MC().j(0),0,null)
-A.bV(q.ghl(q))
+var s=A.hQ(A.MC().j(0),0,null)
+A.bV(s.ghl(s))
 A.b3H(A.MC().ga37().h(0,"token"),'Uri.base.queryParameters["msisdn"]').bx(0,new A.b_d(),t.P)},
 aZI(){var s=0,r=A.t(t.N),q
 var $async$aZI=A.u(function(a,b){if(a===1)return A.p(b,r)
@@ -117465,12 +117461,15 @@ case 1:return A.q(q,r)
 case 2:return A.p(o,r)}})
 return A.r($async$Ao,r)}}
 A.b_d.prototype={
-$1(a){var s
+$1(a){var s,r
 A.aZI().bx(0,new A.b_a(),t.P)
 if($.a0==null)A.ba2()
 s=$.a0
 s.a6R(new A.a0_(a,null))
-s.PZ()},
+s.PZ()
+s=$.agp()
+r=A.b7t(s.h(0,"geolocation"))
+s.jp("postMessage",["latitude::["+r.j(r)+"['latitude']] longitude::["+r.j(r)+"['longitude']]"])},
 $S:60}
 A.b_a.prototype={
 $1(a){A.bV("Aqui va lo de segment")},
